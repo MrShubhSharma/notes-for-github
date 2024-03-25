@@ -1,0 +1,89 @@
+                  ### All commands for git repository ###
+
+Clone and status 
+clone: cloning a repository on our local machine.
+    git clone <-repository link->
+
+then change directory 
+  cd <-repository name->
+
+
+status: display the status of the code
+  git status
+
+Some Important terms :
+1. Untracked: new files that git doesn't yet track.
+2. modified: changed 
+3. staged: The file is ready to be committed 
+4. unmodified: unchanged
+
+Add: adding new or changed files in your working dictionary to the git staging area.  
+    git add .  / git add <-file name ->
+
+commit: it is the record of changes 
+    git commit -m "message for the commit "
+
+push: upload local repository content to the remote repository 
+    git push origin main 
+
+init: used to create a new git repository 
+    git init 
+
+#how to create a new repository?
+    mkdir <-name repository->
+
+    git remote  add origin <-url->
+    git remote -v   {to verify remote}
+    git branch      {to check branch}
+    git branch -M main  {to rename branch}
+    git push origin main / git push -u origin main    {-u: set upstream (used for the main repo when multiple branches are there)}
+
+
+#how to create a new branch?
+    git checkout -b <-branch name->
+
+
+
+Branch Commands :
+
+git branch    {to check branch}
+git branch -M main {to rename branch }
+git checkout  <-branch name->   {to navigate to that branch}
+git checkout -b <branch name ->    {to create a new branch}
+
+
+Merging Code in git :
+
+git branch <-branch name ->    {to compare commits, branch,files }
+
+git merge <-branch name->      {to merge 2 branch}
+
+# Another way to merging- create a PR (Pull Request)
+   -it lets you tell others about changes you've pushed to a branch in a repository on GitHub.
+
+    git pull  origin main   {used to fetch and download content from a remote repository and immediately update the local repository to match that content}
+
+
+# How to resolve Merge conflicts?
+-> An event that takes place when git is unable to automatically resolve differences in code btw two commits.
+
+Undoing Changes:
+Case 1: Staged changes 
+  git reset <-file name ->
+  git reset 
+
+Case 2: Commit changes (for one commit)
+  git reset HEAD~1
+
+Case 3: committed changes (for many commits)
+  git reset <-commit hash->
+  git reset  --hard <-commit hash->
+
+Fork :
+  ->A fork is a new repository that stores code and visibility with the original "upstream" repository. 
+  -> fork is a rough copy
+
+
+
+
+
